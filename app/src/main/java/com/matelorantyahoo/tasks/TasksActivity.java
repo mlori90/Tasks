@@ -256,7 +256,7 @@ public class TasksActivity extends AppCompatActivity implements android.app.Load
         });
 
 //        Starting the loader
-        Log.i(LOG_TAG,"Day = " + mCurrentDateMillis);
+
         getLoaderManager().initLoader(LOADER_ID,null,this);
 
 
@@ -294,7 +294,6 @@ public class TasksActivity extends AppCompatActivity implements android.app.Load
                 long time = cal.getTimeInMillis();
                 mCurrentDateMillis = DateUtilities.getDayInMillis(time);
                 mTvDate.setText(DateUtilities.getDisplayDate(mCurrentDateMillis));
-                Log.i(LOG_TAG,"Day = " + mCurrentDateMillis);
                 getLoaderManager().restartLoader(LOADER_ID,null,TasksActivity.this);
 
             }
@@ -337,7 +336,6 @@ public class TasksActivity extends AppCompatActivity implements android.app.Load
                         sortingOrder);
 
             case LOADRE_ID_PAST:
-                Log.i(LOG_TAG, "THe count is on CreateLoader :" + mCountUnfinishedTask);
 
 //                Returning a new cursor
                 String[] projectionPast = {TaskEntry._ID, TaskEntry.COLUMN_TASK_STATE};
@@ -370,7 +368,6 @@ public class TasksActivity extends AppCompatActivity implements android.app.Load
                 break;
             case LOADRE_ID_PAST:
                 getCount(data);
-                Log.i(LOG_TAG, "Number of unfinished tasks: " + mCountUnfinishedTask);
                 if (mCountUnfinishedTask>0){
                     mUnfinishedTask = true;
                     invalidateOptionsMenu();

@@ -264,7 +264,6 @@ public class AddTaskActivity extends AppCompatActivity implements LoaderManager.
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
 
 
-        Log.i(LOG_TAG,"OnCreateLoader " + mCurrentTaskUri);
 //        Setting up the wanted columns
         String [] projection = {
                 TaskEntry._ID,
@@ -283,7 +282,7 @@ public class AddTaskActivity extends AppCompatActivity implements LoaderManager.
         if (cursor == null || cursor.getCount() < 1) {
             return;
         }
-        Log.i(LOG_TAG,"OnLoadFinish");
+
         if (cursor.moveToFirst()){
 
 //            Getting the column indexes;

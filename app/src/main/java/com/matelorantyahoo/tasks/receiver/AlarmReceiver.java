@@ -10,6 +10,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
@@ -37,7 +39,6 @@ public class AlarmReceiver extends BroadcastReceiver{
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.i(LOG_TAG,"OnRecieved");
 
         SharedPreferences sharedPreferences =
                 context.getSharedPreferences(NotificationActivity.NOTIFICATION_PREF_NAME,Context.MODE_PRIVATE);
@@ -47,7 +48,7 @@ public class AlarmReceiver extends BroadcastReceiver{
 
 //        Getting the cursor for the current day where there are unfinished tasks
         String [] projection = {TaskEntry._ID};
-        String selection = TaskEntry.COLUMN_TASK_STATE + "=? AND " + TaskEntry.COLUMN_TASK_DATE +"<?";
+        String selection = TaskEntry.COLUMN_TASK_STATE + "=? AND " + TaskEntry.COLUMN_TASK_DATE +"=?";
         String[] selectionArgs = {String.valueOf(0),String.valueOf(DateUtilities.getTodayInMillis())};
         Cursor cursor = context.getContentResolver().query(TaskEntry.CONTENT_URI,projection,selection,selectionArgs,null);
 
@@ -65,6 +66,7 @@ public class AlarmReceiver extends BroadcastReceiver{
                             CHANNEL_ID,
                             context.getString(R.string.notification_chanel_name),
                             NotificationManager.IMPORTANCE_HIGH);
+                    mChannel.enableLights(true);
                     notificationManager.createNotificationChannel(mChannel);
                 }
 
@@ -72,6 +74,7 @@ public class AlarmReceiver extends BroadcastReceiver{
                 String title = context.getResources().getQuantityString(R.plurals.notification_title,count);
                 String text = context.getResources().getQuantityString(R.plurals.notification_text,count,count);
                 Intent i = new Intent(context, TasksActivity.class);
+                Uri notSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
                 PendingIntent pendingIntent = PendingIntent.getActivity(context,PENDING_INTENT_ID,i,PendingIntent.FLAG_UPDATE_CURRENT);
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(context,CHANNEL_ID)
                         .setSmallIcon(R.drawable.ic_notification_icon)
@@ -80,6 +83,8 @@ public class AlarmReceiver extends BroadcastReceiver{
                         .setContentTitle(title)
                         .setContentText(text)
                         .setContentIntent(pendingIntent)
+                        .setSound(notSound)
+                        .setLights(ContextCompat.getColor(context,R.color.colorAccent),800,1000)
                         .setPriority(NotificationCompat.PRIORITY_HIGH);
 
 //                 Sending the notification

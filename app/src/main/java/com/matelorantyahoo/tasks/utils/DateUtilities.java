@@ -58,13 +58,18 @@ public class DateUtilities {
 //    Getting the current days midnight time in millis
     public static long getTodayInMillis(){
 
-//        Getting the current utcTime
-        long utcNow = System.currentTimeMillis();
+//        Getting the calendar and setting the hours, minutes, seconds and milliseconds to 0
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY,0);
+        calendar.set(Calendar.MINUTE,0);
+        calendar.set(Calendar.SECOND,0);
+        calendar.set(Calendar.MILLISECOND,0);
 
-//        Getting the midnight time in millis for today
-        long todayInMillis = getDayInMillis(utcNow);
+//        Getting the midnight time from the calendar and returning it
+        long todayInMillies = calendar.getTimeInMillis();
 
-        return todayInMillis;
+        return todayInMillies;
+
     }
 
 
@@ -105,25 +110,24 @@ public class DateUtilities {
             return newFormat;
     }
 
+//    Gets the starting time in milliseconds for the passed date
     public static long getDayInMillis(long date){
 
-        //        Getting the timeZone of the user
-        TimeZone tz = TimeZone.getDefault();
+//        Getting the calendar and setting the time to the passed time
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(date);
 
-//        Getting the offset in millis
-        long offsetMillis = tz.getOffset(date);
+//        Setting the hours, minutes, seconds and milliseconds to 0
+        calendar.set(Calendar.HOUR_OF_DAY,0);
+        calendar.set(Calendar.MINUTE,0);
+        calendar.set(Calendar.SECOND,0);
+        calendar.set(Calendar.MILLISECOND,0);
 
-//        Getting the time with offset in millis
-        long timeWithOffset = date + offsetMillis;
+//        Getting from the modified calendar and returning the passed date starting time
+        long dayInMillis = calendar.getTimeInMillis();
 
-//        Converting the millis to days
-        long days = TimeUnit.MILLISECONDS.toDays(timeWithOffset);
-
-//        Converting the days back to millis
-        long dayInMillis = TimeUnit.DAYS.toMillis(days);
-
-//        Returning the midnight millis of the day
         return dayInMillis;
+
     }
 
 
@@ -137,20 +141,17 @@ public class DateUtilities {
         TimeZone tz = TimeZone.getDefault();
 
 //        Getting the current date and time
-        long currentDateInMillisWithoutOffset = cal.getTimeInMillis();
-        long offsetMillisForNow = tz.getOffset(currentDateInMillisWithoutOffset);
-        long currentDateInMillis = currentDateInMillisWithoutOffset + offsetMillisForNow;
+        long currentDateInMillis = cal.getTimeInMillis();
 
 
 //        Setting the hours and minutes for the calendar
         cal.set(Calendar.HOUR_OF_DAY,hours);
         cal.set(Calendar.MINUTE,minutes);
         cal.set(Calendar.SECOND,0);
+        cal.set(Calendar.MILLISECOND,0);
 
 //        Getting the passed date and time
-        long dateWithoutOffset = cal.getTimeInMillis();
-        long offsetMillisForDate = tz.getOffset(dateWithoutOffset);
-        long passedDate = dateWithoutOffset + offsetMillisForDate;
+        long passedDate = cal.getTimeInMillis();
 
 
 //        Checking if the passed date is in the past, if yes then adding 1 day to the passed date
