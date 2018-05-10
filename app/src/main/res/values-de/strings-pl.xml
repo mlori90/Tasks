@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="message_num_task">
+        <item quantity="one">Sie haben %d unerledigte Aufgabe aus vergangenen Tagen!</item>
+        <item quantity="other">Sie haben %d unerledigte Aufgaben aus vergangenen Tagen!</item>
+    </plurals>
+
+    <plurals name="message_bottom_set">
+        <item quantity="one">Als erledigt markieren</item>
+        <item quantity="other">Als erledigt markieren</item>
+    </plurals>
+
+    <plurals name="toast_updated_task">
+        <item quantity="one">Aufgabe erfolgreich aktualisiert!</item>
+        <item quantity="other">%d Aufgaben erfolgreich aktualisiert!</item>
+    </plurals>
+
+    <plurals name="notification_title">
+        <item quantity="one">Unerledigte Aufgabe!</item>
+        <item quantity="other">Unerledigte Aufgaben!</item>
+    </plurals>
+
+    <plurals name="notification_text">
+        <item quantity="one">Sie haben eine unerledigte Aufgabe für heute!</item>
+        <item quantity="other">Sie haben %d unerledigte Aufgaben für heute!</item>
+    </plurals>
+</resources>

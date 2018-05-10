@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="message_num_task">
+        <item quantity="one">Van %d befejezetlen feladatod az előző napokból!</item>
+        <item quantity="other">Van %d befejezetlen feladatod az előző napokból!</item>
+    </plurals>
+
+    <plurals name="message_bottom_set">
+        <item quantity="one">Feladat teljesítve</item>
+        <item quantity="other">Mind teljesítve</item>
+    </plurals>
+
+    <plurals name="toast_updated_task">
+        <item quantity="one">Feladat sikeresen módosítva.</item>
+        <item quantity="other">%d feladat sikeresen módosítva.</item>
+    </plurals>
+
+    <plurals name="notification_title">
+        <item quantity="one">Befejezetlen feladat!</item>
+        <item quantity="other">Befejezetlen feladatok!</item>
+    </plurals>
+
+    <plurals name="notification_text">
+        <item quantity="one">Ma még nem fejezték be egy feladatot!</item>
+        <item quantity="other">Ma még nem fejezték be %d feladatot!</item>
+    </plurals>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".UnfinishedTasks">
+    <item
+        android:id="@+id/menu_item_all_done"
+        android:title="@string/menu_done_all"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_done_all_white_24dp"/>
+
+</menu>

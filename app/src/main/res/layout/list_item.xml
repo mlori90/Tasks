@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Layout for the list item-->
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#808080"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <!--RatingBar for the priority-->
+    <RatingBar
+        android:id="@+id/rb_priority"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:isIndicator="true"
+        android:numStars="3"
+        android:rating="3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_task_name"
+        app:layout_constraintBottom_toTopOf="@+id/tv_task_name"
+        android:layout_marginStart="16dp" />
+    <!--TextView for the name of the task-->
+
+    <TextView
+        android:id="@+id/tv_task_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        tools:text="Jogging"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/rb_priority"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintRight_toLeftOf="@+id/cb_state"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+    <!--CheckBox for the state of the task(finished|unfinished)-->
+
+    <CheckBox
+        android:id="@+id/cb_state"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_task_name"
+        app:layout_constraintBottom_toTopOf="@+id/tv_task_name"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="16dp"
+        android:button="@null"
+        android:background="?android:attr/listChoiceIndicatorMultiple"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#808080"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+</android.support.constraint.ConstraintLayout>

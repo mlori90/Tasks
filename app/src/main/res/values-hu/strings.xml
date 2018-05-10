@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Feladatok</string>
+    <string name="add_task_desc">Leírás</string>
+    <string name="add_task_failed">Feladathozzáadás sikertelen!</string>
+    <string name="add_task_priority_tv">Prioritás!</string>
+    <string name="add_task_title">Megnevezés</string>
+    <string name="add_title_error">Kérlek nevezd meg a feladatott</string>
+    <string name="alert_exit_bottom">Kilépés</string>
+    <string name="delete_task">Feladat törülve!</string>
+    <string name="delete_task_fail">Sikertelen törlés</string>
+    <string name="edit_task_activity">Feladat módosítása</string>
+    <string name="edit_task_successful">Feladat módosítva!</string>
+    <string name="edit_task_unsuccessful">Módosítás sikertelen!</string>
+    <string name="hrs">Óra</string>
+    <string name="menu_delete_task">Törlés</string>
+    <string name="add_task_activity">Új feladat!</string>
+    <string name="add_task_successful">Feladat hozzáadva!</string>
+    <string name="alert_show_bottom">Mutasd</string>
+    <string name="menu_done_all">Mind kész!</string>
+    <string name="menu_save_task">Mentés</string>
+    <string name="notifications">Érteítések</string>
+    <string name="hint_required"><font size="16"><i>(kötelező)</i></font></string>
+    <string name="notifications_activity">Értesítés</string>
+    <string name="notification_time_desc">Válaszd ki, hogy mikor szeretnéd az értesítéseket megkapni.</string>
+    <string name="notification_chanel_name">Befejezetlen feladatok</string>
+    <string name="unfinished_task_label">Befejezetlen feladatok!</string>
+    <string name="unfinished_tasks">Befejezetlen feladatok!</string>
+    <string name="notification_desc">Minden nap emlékeztető értesítéseket kaphatsz, ha van legalább egy befejezetlen feladatod. Kapcsold be az értesítéseket most!</string>
+    <string name="empty_state">Nincs feladat. Új feladatok hozzáadásához kattintson a sárga gombra!</string>
+</resources>

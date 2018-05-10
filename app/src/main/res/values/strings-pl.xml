@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="message_num_task">
+        <item quantity="one">You have %d unfinished task from a previous day!</item>
+        <item quantity="other">You have %d unfinished tasks from previous days!</item>
+    </plurals>
+
+    <plurals name="message_bottom_set">
+        <item quantity="one">Set to finished</item>
+        <item quantity="other">Set all finished</item>
+    </plurals>
+
+    <plurals name="toast_updated_task">
+        <item quantity="one">Task successfully updated!</item>
+        <item quantity="other">%d tasks successfully updated!</item>
+    </plurals>
+
+    <plurals name="notification_title">
+        <item quantity="one">Unfinished task!</item>
+        <item quantity="other">Unfinished tasks!</item>
+    </plurals>
+
+    <plurals name="notification_text">
+        <item quantity="one">You have 1 unfinished task for today!</item>
+        <item quantity="other">You have %d unfinished tasks for today!</item>
+    </plurals>
+</resources>

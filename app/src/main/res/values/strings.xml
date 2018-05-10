@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Tasks</string>
+    <string name="add_task_title">Title</string>
+    <string name="add_task_desc">Description</string>
+    <string name="add_task_priority_tv">Priority!</string>
+    <string name="hint_required"><font size="16"><i>(required)</i></font></string>
+    <string name="menu_save_task">Save</string>
+    <string name="menu_delete_task">Delete</string>
+
+
+    <!--Add task messages-->
+    <string name="add_task_successful">Task added!</string>
+    <string name="add_task_failed">Failed to add task!</string>
+    <string name="add_title_error">Please enter a valid title!</string>
+    <string name="edit_task_successful">Task edited!</string>
+    <string name="edit_task_unsuccessful">Failed to edit the task!</string>
+
+    <!--Delete task-->
+    <string name="delete_task">Task deleted!</string>
+    <string name="delete_task_fail">Failed to delete task!</string>
+
+
+    <!--Title for the add or edit task-->
+    <string name="add_task_activity">Add task!</string>
+    <string name="edit_task_activity">Edit task</string>
+
+    <!--Menu item main activity-->
+    <string name="unfinished_tasks">Unfinished tasks!</string>
+    <string name="alert_exit_bottom">Close</string>
+    <string name="alert_show_bottom">Show</string>
+
+    <!--UnfinishedTaskActivity-->
+    <string name="unfinished_task_label">Unfinished tasks!</string>
+    <string name="menu_done_all">All done!</string>
+
+
+    <!--Notification activity-->
+    <string name="notifications_activity">Notification</string>
+    <string name="notification_desc">You can get a reminder notifications every day if you have at least one unfinished task. To get notifications turn on the Notifications switch.</string>
+    <string name="notifications">Notifications</string>
+    <string name="notification_time_desc">Choose the time when you want to be notified.</string>
+    <string name="hrs">Hrs</string>
+    <string name="notification_chanel_name">Unfinished tasks</string>
+    <string name="empty_state">No task found. You can add a new task by clicking on the yellow bottom!</string>
+
+
+</resources>

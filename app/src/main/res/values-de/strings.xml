@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aufgaben</string>
+    <string name="add_task_activity">Aufgabe hinzufügen!</string>
+    <string name="add_task_desc">Beschreibung</string>
+    <string name="add_task_failed">Hinzufügen der Aufgabe fehlgeschlagen!</string>
+    <string name="add_task_priority_tv">Priorität!</string>
+    <string name="add_task_successful">Aufgabe hinzugefügt!</string>
+    <string name="add_task_title">Titel</string>
+    <string name="add_title_error">Bitte geben Sie einen gültigen Titel an.</string>
+    <string name="alert_exit_bottom">Schließen</string>
+    <string name="alert_show_bottom">Zeigen</string>
+    <string name="hrs">Uhr</string>
+    <string name="menu_delete_task">Löchen</string>
+    <string name="menu_save_task">Speichern</string>
+    <string name="delete_task">Aufgabe gelöscht!</string>
+    <string name="delete_task_fail">Löschen der Aufgabe fehlgeschlagen!</string>
+    <string name="edit_task_activity">Aufgabe bearbeiten</string>
+    <string name="edit_task_successful">Aufgabe bearbeitet!</string>
+    <string name="edit_task_unsuccessful">Bearbeiten der Aufgabe fehlgeschlagen!</string>
+    <string name="hint_required"><font size="16"><i>(erforderlich)</i></font></string>
+    <string name="menu_done_all">Alles erledigt!</string>
+    <string name="notification_chanel_name">Unerledigte Aufgaben</string>
+    <string name="unfinished_task_label">Unerledigte Aufgaben!</string>
+    <string name="unfinished_tasks">Unerledigte Aufgaben!</string>
+    <string name="notifications">Benachrichtigungen</string>
+    <string name="notifications_activity">Benachrichtigung</string>
+    <string name="notification_time_desc">Wählen Sie die Uhrzeit für die Benachrichtigungen aus.</string>
+    <string name="notification_desc">Sie können jeden Tag eine Benachrichtigung bekommen, falls Sie mindestens eine unerledigte Aufgabe haben. Schalten Sie die Benachrichtigungen jetzt an.</string>
+    <string name="empty_state">Keine Aufgabe gefunden. Um eine neue Aufgabe hinzuzufügen klicken Sie auf den Gelben Knopf!</string>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.matelorantyahoo.tasks.NotificationActivity">
+
+    <TextView
+        android:id="@+id/tv_notification_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/notification_desc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/sw_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notifications"
+        android:textSize="20sp"
+        android:switchPadding="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_notification_desc"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_notification_desc" />
+
+    <TextView
+        android:id="@+id/tv_time_notification_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notification_time_desc"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/sw_notification"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_notification_desc" />
+
+    <TextView
+        android:id="@+id/tv_time_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="20:00 Hrs"
+        android:textSize="20sp"
+        android:layout_marginTop="14dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time_notification_desc"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/sw_notification"
+        android:drawableLeft="@drawable/ics_time_svg_24dp"
+        android:drawablePadding="8dp"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
